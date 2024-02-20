@@ -13,6 +13,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Language Translater</title>
   </head>
   <body>
@@ -46,7 +47,7 @@
           <textarea
             id="input-text"
             cols="30"
-            rows="10"
+            rows="7"
             placeholder="Enter your text here"
           ></textarea>
           <div class="chars"><span id="input-chars">0</span> / 5000</div>
@@ -82,13 +83,16 @@
             </ul>
           </div>
         </div>
-        <textarea
+        <div class="copy-link">
+          <textarea  
           id="output-text"
           cols="30"
-          rows="10"
+          rows="7"
           placeholder="Translated text will appear here"
           disabled
         ></textarea>
+        <button ><i class="copy-btn bx bx-copy"></i></button>
+        </div>
         <div class="card-bottom">
           <p>Download as a document!</p>
           <button id="download-btn">

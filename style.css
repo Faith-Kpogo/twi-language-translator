@@ -281,6 +281,24 @@ body.dark {
   width: 20px;
   height: 20px;
 }
+textarea{
+  position: relative;
+}
+.card i{
+  font-size: 30px;
+  color: #1c1b20;
+  transition: .3s;
+  cursor: pointer;
+  position: absolute;
+  left: 90%;
+  top: 85%;
+}
+.card .copy-link{
+  position: relative;
+}
+.card i:hover{
+  color: #356aff;
+}
 
 /* media quiries */
 @media (max-width: 800px) {
@@ -288,6 +306,7 @@ body.dark {
     width: 100%;
     margin-top: 20px;
     flex-direction: column;
+    transform: scale(0.9);
   }
   .container .card {
     width: 100%;
@@ -313,5 +332,15 @@ body.dark {
   }
   .swap-position ion-icon {
     transform: rotate(90deg);
+  }
+  .card-bottom{
+    display: none;
+  }
+  text-area{
+    height: 150px;
+  }
+  .card i{
+    top: 95%;
+    left: 90%;
   }
 }

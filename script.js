@@ -145,3 +145,15 @@ const inputChars = document.querySelector("#input-chars");
 inputTextElem.addEventListener("input", (e) => {
   inputChars.innerHTML = inputTextElem.value.length;
 });
+
+const textoutput = document.querySelector(".copylink textarea")
+const copytext = () => {
+  navigator.clipboard.writeText(textoutput.value);
+  copyIcon.innerText = "check";
+  copyIcon.style.color = "#4285f4";
+  setTimeout(() => {
+      copyIcon.innerText = "copy_all";
+      copyIcon.style.color = "#707070";
+  }, 1500);
+}
+copyIcon.addEventListener("click", copytext);
