@@ -134,11 +134,6 @@ downloadBtn.addEventListener("click", (e) => {
   }
 });
 
-const darkModeCheckbox = document.getElementById("dark-mode-btn");
-
-darkModeCheckbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
-});
 
 const inputChars = document.querySelector("#input-chars");
 
@@ -167,4 +162,7 @@ function copyToClipboard() {
   }, 1500);
   
 };
+
+
+
 
