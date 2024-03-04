@@ -13,13 +13,7 @@
   border-radius: 30px;
   background: #f1f1f1;
 }
-::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: var(--primary-color);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-color);
-}
+
 
 * {
   margin: 0;
@@ -32,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap:25px;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
@@ -52,14 +46,14 @@ body .navbar{
 .navbar .nav-text{
   width: 100%;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
 }
 .container {
   position: relative;
-  width: 1200px;
-  padding: 0 20px;
+  width: 90%;
+  padding: 0 10px;
   display: flex;
   gap: 10px;
 }
@@ -179,6 +173,22 @@ body .navbar{
 .container .center {
   position: relative;
 }
+.text-area {
+  position: relative;
+}
+/* 
+.microphone-icon {
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.microphone-icon:hover {
+  color: var(--primary-color);
+} */
+
 .swap-position {
   display: flex;
   align-items: center;
@@ -253,15 +263,17 @@ body .navbar{
   background-color: var(--primary-color);
 }
 
-
+.copy-link{
+  margin-bottom: 35px;
+}
 textarea{
   position: relative;
 }
 .card button{
   position: absolute;
   left: 90%;
-  top: 80%;
-  font-size: 30px;
+  top: 95%;
+  font-size: 26px;
   color: #1c1b20;
   transition: .3s;
   border: none;
@@ -290,7 +302,25 @@ textarea{
   opacity: 0;
   transition: opacity 0.5s;
 }
-
+.social .icons{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+}
+.icons a{
+  text-decoration: none;
+  color:#1c1b20;
+}
+.icons i{
+  cursor: pointer;
+  transition: .3s;
+}
+.icons i:hover{
+  color: var(--primary-color);
+}
 
 
 /* media quiries */
@@ -332,10 +362,6 @@ textarea{
   text-area{
     height: 150px;
   }
-  .card button{
-    top: 95%;
-    left: 90%;
-  }
   .navbar{
     padding: 10px 0;
     background-color: var(--primary-color);
@@ -355,4 +381,10 @@ textarea{
     left: 90%;
     top: 80%;
   }
+  .copy-popup {
+    position: absolute;
+    bottom: 20%;
+    left: 90%;
+  }
+
 }
