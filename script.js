@@ -145,15 +145,26 @@ const inputChars = document.querySelector("#input-chars");
 inputTextElem.addEventListener("input", (e) => {
   inputChars.innerHTML = inputTextElem.value.length;
 });
+function copyToClipboard() {
+  var outputText = document.getElementById("output-text");
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(outputText.value)
+      .then(() => {
+        console.log("Copied to clipboard: " + outputText.value);
+      })
+      .catch((error) => {
+        console.error("Unable to copy to clipboard", error);
+      });
+      
+  } else {
+    alert("Your browser doesn't support the Clipboard API. Please use a different method to copy the text.");
+  }
+  var copyPopup = document.getElementById("copyPopup");
+  copyPopup.style.opacity = 1;
 
-const textoutput = document.querySelector(".copylink textarea")
-const copytext = () => {
-  navigator.clipboard.writeText(textoutput.value);
-  copyIcon.innerText = "check";
-  copyIcon.style.color = "#4285f4";
-  setTimeout(() => {
-      copyIcon.innerText = "copy_all";
-      copyIcon.style.color = "#707070";
+  setTimeout(function() {
+      copyPopup.style.opacity = 0;
   }, 1500);
-}
-copyIcon.addEventListener("click", copytext);
+  
+};
+
